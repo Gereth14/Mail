@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyparser = require("body-parser");
-const https = require("node:https");
+const https = require("https");
 const PORT = 3000;
 
 const app = express();
@@ -31,7 +31,7 @@ app.post("/", function(req, res){
     const url ="https://us10.api.mailchimp.com/3.0/lists/d73adae083"
     const options = {
         method: "POST",
-        auth: "Gereth:3a57a4ebc929f2988d14c09da5b451c1-us10"
+        auth: "Gereth:0701656366d81e7ac4cf5f232d1ded2e-us10"
     }
     const request = https.request(url, options, function(response){
         if(response.statusCode == 200){

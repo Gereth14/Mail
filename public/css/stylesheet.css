@@ -36,3 +36,9 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+input:invalid{
+  border: 2px red;
+}
+input:valid{
+  border: black;
+}

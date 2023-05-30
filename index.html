@@ -160,23 +160,28 @@
 
     
 <main class="form-signin w-100 m-auto">
-  <form actin="/" method="post">
+  
+  <form action="/" method="post">
     <img class="mb-4" src="image/Ferrari.png" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Sign up for news letter</h1>
 
     <div class="form-floating">
-        <input type="text" class="form-control" placeholder="First Name" name="FN">
+        <input type="text" class="form-control" placeholder="First Name" name="FN" required 
+        oninvalid="this.setCustomValidity('First name is required')" oninput="this.setCustomValidity('')">
         <label for="floatingInput">First Name</label>
     </div>
     <div class="form-floating">
-        <input type="text" class="form-control" placeholder="Last Name" name="LN">
+        <input type="text" class="form-control" placeholder="Last Name" name="LN" required 
+        oninvalid="this.setCustomValidity('Last name is required')" oninput="this.setCustomValidity('')">
         <label for="floatingInput">Last Name</label>
     </div>
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="Email">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="Email" pattern=".+\.com" required 
+      oninvalid="this.setCustomValidity('Invalid email')" oninput="this.setCustomValidity('')">
       <label for="floatingInput">Email address</label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign me up!</button>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="signup()">Sign me up!</button>
+    <label style="visibility: hidden;" name="Warning">test</label>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
   </form>
 </main>

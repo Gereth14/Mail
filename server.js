@@ -29,7 +29,7 @@ app.post("/", function(req, res){
         ]
     };
     const jsonData = JSON.stringify(data);
-    const url ="https://us10.api.mailchimp.com/3.0/lists/d73adae083"
+    const url ="https://us10.api.mailchimp.com/3.0/lists/" + process.env.listid;
     const options = {
         method: "POST",
         auth: "Gereth:" + process.env.apikeys
